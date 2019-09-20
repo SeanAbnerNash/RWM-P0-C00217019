@@ -2,17 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Modulo3 : MonoBehaviour
+public class Modulo3 
 {
-    // Start is called before the first frame update
-    void Start()
+    public static int modulo3(int x)
     {
-        
+        return (x % 3);
     }
 
-    // Update is called once per frame
-    void Update()
+    public static int[] modulo3(int[] xs)
     {
-        
+        int[] result = new int[xs.Length];
+        for (int i = 0; i < xs.Length; i++)
+        {
+            result[i] = modulo3(xs[i]);
+        }
+        return result;
     }
 }
